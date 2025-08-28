@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "/home/amov/crazyswarm/ros_ws/devel/lib/crazyflie_tools/comCheck"
+  "/home/amov/crazyswarm/ros_ws/devel/lib/crazyflie_tools/comCheck.pdb"
+  "CMakeFiles/comCheck.dir/src/comCheck.cpp.o"
+  "CMakeFiles/comCheck.dir/src/comCheck.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/comCheck.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

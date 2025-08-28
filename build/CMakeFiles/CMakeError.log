@@ -1,0 +1,75 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/amov/crazyswarm/ros_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a7586/fast && /usr/bin/make  -f CMakeFiles/cmTC_a7586.dir/build.make CMakeFiles/cmTC_a7586.dir/build
+make[1]: 进入目录“/home/amov/crazyswarm/ros_ws/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_a7586.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a7586.dir/src.c.o -c /home/amov/crazyswarm/ros_ws/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a7586
+/home/amov/cmake-3.20.5-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7586.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_a7586.dir/src.c.o -o cmTC_a7586 
+/usr/bin/ld: CMakeFiles/cmTC_a7586.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a7586.dir/build.make:99：cmTC_a7586] 错误 1
+make[1]: 离开目录“/home/amov/crazyswarm/ros_ws/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:127：cmTC_a7586/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/amov/crazyswarm/ros_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_793d4/fast && /usr/bin/make  -f CMakeFiles/cmTC_793d4.dir/build.make CMakeFiles/cmTC_793d4.dir/build
+make[1]: 进入目录“/home/amov/crazyswarm/ros_ws/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_793d4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_793d4.dir/CheckFunctionExists.c.o -c /home/amov/cmake-3.20.5-linux-x86_64/share/cmake-3.20/Modules/CheckFunctionExists.c
+Linking C executable cmTC_793d4
+/home/amov/cmake-3.20.5-linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_793d4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_793d4.dir/CheckFunctionExists.c.o -o cmTC_793d4  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_793d4.dir/build.make:99：cmTC_793d4] 错误 1
+make[1]: 离开目录“/home/amov/crazyswarm/ros_ws/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:127：cmTC_793d4/fast] 错误 2
+
+
+
+Determining if the Perl module Parse::RecDescent exists failed with the following error output:
+Can't locate Parse/RecDescent.pm in @INC (you may need to install the Parse::RecDescent module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at -e line 1.
+BEGIN failed--compilation aborted at -e line 1.
+
+
+Determining if the Perl module Parse::RecDescent exists failed with the following error output:
+Can't locate Parse/RecDescent.pm in @INC (you may need to install the Parse::RecDescent module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at -e line 1.
+BEGIN failed--compilation aborted at -e line 1.
+
+
+Determining if the Perl module Parse::RecDescent exists failed with the following error output:
+Can't locate Parse/RecDescent.pm in @INC (you may need to install the Parse::RecDescent module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at -e line 1.
+BEGIN failed--compilation aborted at -e line 1.
+
+
